@@ -1,33 +1,33 @@
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './CSS/index.css';
 
+import HomePage from './components/HomePage' 
 import Happy from './components/Happy';
 import Sleepy from './components/Sleepy';
 import Guilty from './components/Guilty';
-import HomePage from './components/HomePage';
 
+// your code goes here
 class Home extends Component{
   render(){
     return(
-    
-    <Router>
+      <Router>
       <div>
         <ul>
           <li>
             <Link to="/Home">Home</Link>
           </li>
           <li>
-            <Link to="/Guilty">Guilty</Link>
+            <Link to="/Happy">Happy</Link>
           </li>
           <li>
-            <Link to="/Happy">Happy</Link>
+            <Link to="/Guilty">Guilty</Link>
           </li>
           <li>
             <Link to="/Sleepy">Sleepy</Link>
           </li>
-        </ul> 
+        </ul>
 
         <Route exact path="/HomePage" component={HomePage} />
         <Route path="/Happy" component={Happy} />
@@ -36,10 +36,8 @@ class Home extends Component{
 
       </div>
     </Router>
-  );
+    )
+  }
 }
-
-}
-
 
 ReactDOM.render( <Home />, document.getElementById('root') );

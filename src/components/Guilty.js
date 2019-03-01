@@ -5,7 +5,6 @@ class Guilty extends Component {
   render() {
     return (
       <div id="guilty"></div>
-      
     );
   }
 }
